@@ -1,0 +1,36 @@
+@startuml practica2reto4diagramaclases
+
+class Persona {
+    string nombre
+    int telefono
+    string direccion
+}
+class Jugador {
+    int numero
+    string posicion
+}
+class Capitan
+class Entrenador{
+    string nivelAcreditacion
+    int aniosExperiencia
+}
+class Equipo {
+    string nombre
+    int registro
+}
+class Juego {
+    string localidad
+    int puntuacion
+}
+
+Persona <|-- Jugador
+Persona <|-- Entrenador
+
+Jugador "1" -- "1" Capitan : es un
+
+Entrenador "1" o-- "many" Equipo : entrena
+Equipo "1" *-- "6..20" Jugador : juega
+
+Juego "1..many" *-- "2" Equipo : compite
+
+@enduml

@@ -1,0 +1,150 @@
+@startuml practica2reto4diagramaobjetos
+
+object "Juego : Panamericanos" as Juego {
+    localidad = "Chile"
+    puntuacion = 
+}
+
+object "Equipo : Venezuela" as EquipoV {
+    nombre = "Venezuela"
+    registro = 
+}
+
+object "Equipo : Colombia" as EquipoC {
+    nombre = "Colombia"
+    registro = 
+}
+
+object "Entrenador : Venezuela" as EntrenadorV {
+    nombre = "..."
+    telefono = 
+    direccion = "Caracas, Venezuela"
+    nivelAcreditacion = 
+    aniosExperiencia = 
+}
+
+object "Jugador : J1Venezuela" as JugadorV1 {
+    nombre = "..."
+    telefono = 
+    direccion = "Caracas, Venezuela"
+    numero = 1
+    posicion = "..."
+}
+
+object "Jugador : J2Venezuela" as JugadorV2 {
+    nombre = "..."
+    telefono = 
+    direccion = "Caracas, Venezuela"
+    numero = 2
+    posicion = "..."
+}
+
+object "Jugador : J3Venezuela" as JugadorV3 {
+    nombre = "..."
+    telefono = 
+    direccion = "Caracas, Venezuela"
+    numero = 3
+    posicion = "..."
+}
+
+object "Jugador : J4Venezuela" as JugadorV4 {
+    nombre = "..."
+    telefono = 
+    direccion = "Caracas, Venezuela"
+    numero = 4
+    posicion = "..."
+}
+
+object "Jugador : J5Venezuela" as JugadorV5 {
+    nombre = "..."
+    telefono = 
+    direccion = "Caracas, Venezuela"
+    numero = 5
+    posicion = "..."
+}
+
+object "Jugador : J6Venezuela" as JugadorV6 {
+    nombre = "..."
+    telefono = 
+    direccion = "Caracas, Venezuela"
+    numero = 6
+    posicion = "..."
+}
+
+object "Entrenador : Colombia" as EntrenadorC {
+    nombre = "..."
+    telefono = 
+    direccion = "Bogotá, Colombia"
+    nivelAcreditacion = 
+    aniosExperiencia = 
+}
+
+object "Jugador : J1Colombia" as JugadorC1 {
+    nombre = "..."
+    telefono = 
+    direccion = "Bogotá, Colombia"
+    numero = 1
+    posicion = "..."
+}
+
+object "Jugador : J2Colombia" as JugadorC2 {
+    nombre = "..."
+    telefono = 
+    direccion = "Bogotá, Colombia"
+    numero = 2
+    posicion = "..."
+}
+
+object "Jugador : J3Colombia" as JugadorC3 {
+    nombre = "..."
+    telefono = 
+    direccion = "Bogotá, Colombia"
+    numero = 3
+    posicion = "..."
+}
+
+object "Jugador : J4Colombia" as JugadorC4 {
+    nombre = "..."
+    telefono = 
+    direccion = "Bogotá, Colombia"
+    numero = 4
+    posicion = "..."
+}
+
+object "Jugador : J5Colombia" as JugadorC5 {
+    nombre = "..."
+    telefono = 
+    direccion = "Bogotá, Colombia"
+    numero = 5
+    posicion = "..."
+}
+
+object "Jugador : J6Colombia" as JugadorC6 {
+    nombre = "..."
+    telefono = 
+    direccion = "Bogotá, Colombia"
+    numero = 6
+    posicion = "..."
+}
+
+Juego *-- EquipoV : compiten
+Juego *-- EquipoC : compiten
+
+EquipoV o-- EntrenadorV : entrena
+EquipoC o-- EntrenadorC : entrena
+
+EquipoV *-- JugadorV1 : juega
+EquipoV *-- JugadorV2 : juega
+EquipoV *-- JugadorV3 : juega
+EquipoV *-- JugadorV4 : juega
+EquipoV *-- JugadorV5 : juega
+EquipoV *-- JugadorV6 : juega
+
+EquipoC *-- JugadorC1 : juega
+EquipoC *-- JugadorC2 : juega
+EquipoC *-- JugadorC3 : juega
+EquipoC *-- JugadorC4 : juega
+EquipoC *-- JugadorC5 : juega
+EquipoC *-- JugadorC6 : juega
+
+@enduml
